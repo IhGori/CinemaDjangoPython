@@ -4,17 +4,29 @@ Criação de aplicação web de um Cinema utilizando framework Django
 - Para execução necessário configuração do protocolo SMTP com o Gmail em settings.py de acordo com o e-mail do projeto,
 
 
-<h1>Instalação</h1>
+<h3>Instalação</h3>
 <br>
+<ul>
+    <li>Instalação do django: pip install django</li>  
+</ul>
 
-- Instalação do django: pip install django
 
-#Utilização
+<h3>Instalação</h3>
+<br>
+<ul>
+    <li>Todos imports para execução podem ser instalados a partir do comando: pip install -r requirements.txt</li> 
+    <li>
+        Aplicação do mekmigrations (Verificações de alterações nos modelos) e migrate para gerenciar as estruturas das tabelas para com o banco de dados:
+        <ul>
+            <li>python manage.py makemigrations</li>
+            <li>python manage.py migrate</li>
+        </ul>
+    </li> 
+</ul>
 
-- Todos imports para execução podem ser instalados a partir do comando: pip install -r requirements.txt
-- Aplicação do mekmigrations (Verificações de alterações nos modelos) e migrate para gerenciar as estruturas das tabelas para com o banco de dados:
-    - python manage.py makemigrations
-    - python manage.py migrate 
+
+<h3>Criação de usuários e superusuários</h3>
+
 
 Creation of a Cinema web application using Django framework
 
