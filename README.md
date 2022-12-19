@@ -5,6 +5,7 @@ Criação de aplicação web de um Cinema utilizando framework Django
 
 
 <h3>Instalação</h3>
+<hr>
 <br>
 <ul>
     <li>Instalação do django: pip install django</li>  
@@ -12,6 +13,7 @@ Criação de aplicação web de um Cinema utilizando framework Django
 
 
 <h3>Instalação</h3>
+<hr>
 <br>
 <ul>
     <li>Todos imports para execução podem ser instalados a partir do comando: pip install -r requirements.txt</li> 
@@ -26,7 +28,8 @@ Criação de aplicação web de um Cinema utilizando framework Django
 
 
 <h3>Criação de usuários e superusuários</h3>
-
+<hr>
+<br>
 
 Creation of a Cinema web application using Django framework
 
