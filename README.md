@@ -27,7 +27,7 @@ Criação de aplicação web de um Cinema utilizando framework Django
 </ul>
 
 
-<h3>Criação de usuários e superusuários</h3>
+# Criação de usuários e superusuários
 <hr>
 <br>
 
