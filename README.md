@@ -1,4 +1,4 @@
-# CinemaDjangoPython
+# Cinema Django-Python/HTML/JavaScripts/CSS
 Criação de aplicação web de um Cinema utilizando framework Django
 
 - Para execução necessário configuração do protocolo SMTP com o Gmail em settings.py de acordo com o e-mail do projeto,
