@@ -1,0 +1,160 @@
+{% load static %}
+{% load crispy_forms_tags %} 
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CineSD - Os Caras Malvados{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/css/grid.css' %}">
+    <link rel="stylesheet" href="{% static '/css/carousel.css' %}">
+    <link rel="stylesheet" href="{% static '/css/infomovies.css' %}">
+    <link rel="stylesheet" href="{% static '/css/horarios.css' %}">
+
+ 
+   
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="">Cine<span>SD</span></a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/cinesd">Início</a></li>
+                    <li><a href="/programacao">Programação</a></li>
+                    <li><a href="/snackbar">SnackBar</a></li>
+					<li><a href="/promocoes">Promoções</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                    <li><a href="/signin">
+                        {% if user.is_authenticated %}
+                        <h3>{{ fname }}</h3>
+                        {% endif %}
+                    </a></li>
+                    <li><a href="#">
+                        {% if user.is_authenticated %}
+                        <button type="submit"><a href="/signout"> Deslogar</a></button>
+                        {% else %}
+                        <button type="submit"><a href="/signin">Login</a></button>
+                        <button type="submit"><a href="/signup">Cadastrar</a></button>
+                        {% endif %}
+                    </a></li>
+                </ul>
+            </div>
+        </div>        
+    </header>
+
+    
+    <!--Seção Home da tela Principal-->
+    <section class="home" id="home">
+        <div class="max-width">
+            <!--Texto com js na tela-->
+            <div class="home-content">
+                <div class="text-1">Cine<span>SD</span></div>
+                <div class="text-2">Que tal</div>
+                <div class="text-3"> <span class="typing"></span></div>
+				<a href="#">COMPRE SEU INGRESSO</a>
+            </div>
+        </div>
+    </section>
+
+    
+    
+      <!-- about section start -->
+      <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title"></h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="media/img/cartaz/carasmalvados.jpg" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">Os Caras Malvados</div>
+                    <p>01h 40min</p>
+                    <div class="genre_movies">
+                        <ul>
+                            
+                            <button><li>Animação</li></button>                                
+                            <button id="classificacaolivre"><li>L</li></button>                              
+                                                       
+                        </ul>
+                    </div>
+                </br>
+                    <hr size="1" >
+                </br>    
+                    <h1>Sinopse e Detalhes</h1>
+                    <p>Data de lançamento: 17/03/2022</p>
+                    <p>Direção: Pierre Perifel</p>
+                    <p>Nacionalidade: Estados Unidos</p>
+                    <p>Nunca houve cinco amigos tão infames quanto Os Caras Malvados - o arrojado batedor de carteiras Sr. Wolf, o arrombador de cofres Mr. Snake, o mestre do disfarce do frio Sr. Shark, o ?músculo? curto do Sr. Piranha e a especialista em hacker de língua afiada Sra. Tarantula, também conhecida como "Webs". Mas quando, depois de anos de incontáveis assaltos e sendo os vilões mais procurados do mundo, a gangue é finalmente capturada, o Sr. Wolf negocia um acordo (que ele não tem intenção de manter) para salvá-los da prisão: os bandidos irão virar bonzinhos. Classificação indicativa livre, contém violência fantasiosa.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg-modal" id="modal">
+        <div class="modal">
+            <span class="close" onclick="fecharModal()">&times;</span>
+        </br></br></br></br>
+            <div class="precos_cine" id="precos_cine">
+                <ul>
+                    <li>
+                        O CineSD se reserva o direito de mudar os dias e horários das sessões sem aviso prévio. Confira sempre a nossa programação
+                    </li>
+                    <br>
+                    <li>
+                        Para a compra de ingressos 3D do CineSD: o valor do óculos 3D é R$8,00 e não está incluso no valor do ingresso. Venda exclusiva na bilheteria do cinema.
+                    </li>
+                </ul>
+                <br>
+                <ul>
+                    <li>
+                        <b>Idiomas: </b>
+                        LEG: Legendado | DUB: Dublado | NAC: Nacional
+                    </li>
+                <br>
+                    <li>
+                        <b>Sessão: </b>
+                        3D: projeção com o uso de óculos 3D | MAT: CineMaterna | AZUL: Sessão Azul
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </br>
+    </br>
+
+    
+  
+
+    <div class="botao_comprar">
+        <a href="/venda_carasmalvados"><button>Comprar Ingresso</button></a>
+        </div>
+        <!--detailcaras/114126ca-ddff-4f71-a471-234926f0115e-->
+        
+     
+    
+    
+   
+       
+    <script src="{% static '/js/script.js' %}"></script>
+    <script src="{% static '/js/carousel.js' %}"></script>
+    <script src="{% static '/js/dia_horario.js' %}"></script>
+    <script src="{% static '/js/dia_horario2.js' %}"></script>
+    <script src="{% static '/js/dia_horario3.js' %}"></script>
+    <script src="{% static '/js/price.js' %}"></script>
+</body>
+</html>

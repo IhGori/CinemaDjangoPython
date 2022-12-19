@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}  
+{% block title %}CineSD{% endblock %}
+
+
+{% block content %}
+    
+     <!-- contact section start -->
+     <section class="contact" id="contact">
+        <div class="max-width">
+            
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Entre em contato</div>
+                    <p>
+                        Caso tenha dúvidas, sugestões ou críticas mande uma mensagem que o quanto antes retornaremos.
+                    </p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head"></div>
+                                <div class="sub-title">CineSD</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Endereço</div>
+                                <div class="sub-title">Petrolina - PE, Brasil</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">cinesdcontact@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Mande um recado...</div>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="fields">
+                            <div class="form-group">
+                                <div class="field name" id="input_name">
+                                    <input type="text" name="subject" class="form-control" placeholder="Nome">
+                                </div>
+                            </div>    
+                            <div class="form-group">
+                                <div class="field email" id="input_email">
+                                    <input type="email" name="email" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <div class="field textarea">
+                                    <input type="text" name="mesage" class="form-control" placeholder="Digite sua mensagem..">
+                                </div>
+                            </div>
+                            <div class="button-area">
+                                <button type="submit">Enviar mensagem</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}

@@ -1,0 +1,146 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - CineSD</title>
+    
+    
+    <link rel="stylesheet" href="{% static '/css/venda.css' %}">
+</head>
+<body>
+
+    <div class="header" id="header">
+        <header class="navbar">
+            <div class="max-width">
+                <div class="logo"><a href="/cinesd">Cine<span>SD</span></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/cinesd">Início</a></li>
+                        <li><a href="/programacao">Programação</a></li>
+                        <li><a href="/snackbar">SnackBar</a></li>
+                        <li><a href="/promocoes">Promoções</a></li>
+                        <li><a href="/contato">Contato</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Busca</a></li>
+                    
+                    </ul>
+                    
+                </div>
+            </div>        
+        </header>
+    </div>
+
+
+    <div class="bg-modal-vacina" id="modal-vacina">
+        <div class="modal-vacina">
+            <span class="close" onclick="fecharModal()">&times;</span>
+             </br></br></br></br>
+            <div class="vacina_cine" id="vacina_cine">
+                <div class="obrigatoriedade_vacina">
+                </br>
+                    <h4>Obrigatoriedade da Vacina</h4>
+            </br>
+                    <p>De acordo com decreto municipal, é obrigatório a apresentação do comprovante de vacinação contra a COVID 19, para grupos que já poderiam estar vacinados.</p>
+                </div>
+            </br>
+        </br>
+                <div class="medida_preventiva">
+                    <h3>Medidas Preventivas dos Cinemas</h3>
+                </br>
+                    <p>Fique tranquilo! Para a sua segurança, os cinemas seguem medidas preventivas contra o COVID-19 de acordo com a lei vigente em cada cidade. Para conhecer os detalhes do protocolo em prática no seu cinema favorito, sugerimos entrar em contato direto com exibidor.</p>
+            </br>
+                    <p>Em salas com capacidade reduzida, é natural que haja concorrência por assentos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-side">
+            <div class="movie-detail">
+                <div class="poster">
+                    <img src="{{ object.filme.poster.url }}" alt="{{object.filme.titulo}}">
+                </div>
+                <div class="movie-info">
+                    <div class="titulo">
+                        <h3>{{object.filme.titulo}}</h3>
+                    </div>
+                    <p>{{object.sala}}</p>
+                    <p>{{object.data}} - {{object.horario}}</p>
+                    <div class="tipo-filme">
+                        <p>{{object.sala.legenda}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="options">
+                <button class="type" id="type">
+                    Tipos de ingresso
+                </button>
+
+                <button class="payment" id="payment" onclick="total()">
+                    Forma de pagamento
+                </button>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="option_type" id="ingresso">
+                    <div class="inteira">
+                        <div class="text">
+                            <p class="tipo-ingresso">Inteira:</p>
+                            <p class="valor">R$ 15,00</p>
+                        </div>
+                        <select id="qt_inteira">
+                            <option value="0">Qtd</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <div class="meia">
+                        <div class="text">
+                            <p class="tipo-ingresso">Meia:</p>
+                            <p class="valor">R$ 7,50</p>
+                        </div>
+                        <select id="qt_meia">
+                            <option value="0">Qtd</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="option_payment" id="option_payment">
+                teste2
+            </div>
+        </div>
+
+        <div class="valor-final">
+            <h3 class="valor-total">Valor</h3>
+            
+        </div>
+    </div>
+
+
+    <script src="{% static '/js/script.js' %}"></script>
+    <script src="{% static '/js/carousel.js' %}"></script>
+    <script src="{% static '/js/dia_horario.js' %}"></script>
+    <script src="{% static '/js/dia_horario2.js' %}"></script>
+    <script src="{% static '/js/dia_horario3.js' %}"></script>
+    <script src="{% static '/js/price.js' %}"></script>
+    <script src="{% static '/js/vacina.js' %}"></script>
+    <script src="{% static '/js/tipo_ingresso.js' %}"></script>
+    <script src="{% static '/js/tipo_pagamento.js' %}"></script>
+    <script src="{% static '/js/valor-final.js' %}"></script>
+</body>
+</html>

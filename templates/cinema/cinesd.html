@@ -1,0 +1,401 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}  
+{% block title %}CineSD{% endblock %}
+
+
+{% block content %}
+    
+    <!--Seção Programação-->
+
+       <!-- LATEST MOVIES SECTION -->
+    <div class="section" id="section1">
+      <div class="container">
+          <div class="section-header">
+              Em Cartaz
+          </div>
+          <div class="movies-slide carousel-nav-center owl-carousel">
+              <!-- MOVIE ITEM -->
+              <a href="/batman" class="movie-item">
+                  <img src="media/img/cartaz/bat.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span></span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>177 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D e 3D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>14+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/uncharted" class="movie-item">
+                  <img src="media/img/cartaz/uncharted4.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span></span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>116 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>3D e IMAX</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>12+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/autodacompadecida" class="movie-item">
+                  <img src="media/img/cartaz/auto2.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span></span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>104 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>12+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/oritual" class="movie-item">
+                  <img src="media/img/cartaz/oritual.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span></span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>97 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>14+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/swordart" class="movie-item">
+                  <img src="media/img/cartaz/swordart.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span></span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>97 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>12+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/carasmalvados" class="movie-item">
+                  <img src="media/img/cartaz/carasmalvados.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                         
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span></span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>100 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>Livre</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/belfast" class="movie-item">
+                  <img src="media/img/cartaz/belfast.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span></span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>98 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>14+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+          </div>
+      </div>
+  </div>
+  <!-- END LATEST MOVIES SECTION -->
+
+  <!-- LATEST SERIES SECTION -->
+  <div class="section">
+      <div class="container">
+          <div class="section-header">
+              Em Breve
+          </div>
+          <div class="movies-slide carousel-nav-center owl-carousel">
+              <!-- MOVIE ITEM -->
+              <a href="/morbius" class="movie-item">
+                  <img src="media/img/cartaz/morbiusposter.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span>31/03/2022</span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>110 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>14+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/sonic2" class="movie-item">
+                  <img src="media/img/cartaz/sonic2.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span>07/04/2022</span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>110 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>10+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/jujutsu" class="movie-item">
+                  <img src="media/img/cartaz/jujutsu.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span>24/03/2022</span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>105 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span></span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/animaisfantasticos" class="movie-item">
+                  <img src="media/img/cartaz/dumbledore.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                        
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span>14/04/2022</span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>143 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D e 3D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>16+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/drstrange2" class="movie-item">
+                  <img src="media/img/cartaz/drstrange3.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span>05/05/2022</span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>148 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D e 3D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>13+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/spider2" class="movie-item">
+                  <img src="media/img/cartaz/spiderman.png" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span>06/10/2022</span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span>117 mins</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span>12+</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+              <!-- MOVIE ITEM -->
+              <a href="/avatar2" class="movie-item">
+                  <img src="media/img/cartaz/avatar2.jpg" alt="">
+                  <div class="movie-item-content">
+                      <div class="movie-item-title">
+                          
+                      </div>
+                      <div class="movie-infos">
+                          <div class="movie-info">
+                              <i class="bx bxs-star"></i>
+                              <span>15/12/2022</span>
+                          </div>
+                          <div class="movie-info">
+                              <i class="bx bxs-time"></i>
+                              <span></span>
+                          </div>
+                          <div class="movie-info">
+                              <span>2D e 3D</span>
+                          </div>
+                          <div class="movie-info">
+                              <span></span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <!-- END MOVIE ITEM -->
+          </div>
+      </div>
+  </div>
+  <!-- END LATEST SERIES SECTION -->
+
+    <!--Fim Seção Programação-->
+
+{% endblock %}

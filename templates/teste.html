@@ -1,0 +1,35 @@
+{% load static %}
+{% load qr_code %}
+{% load crispy_forms_tags %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="sideNav">
+            <form action="{% url 'welcome_user' %}">
+                <p id="id3">Categories</p>
+                <hr>
+                {% for i in products %}
+                    <input type="checkbox" name="cat_name" value="{{i.cat}}">{{i.cat}}<br>
+                {% endfor %}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div>
+            {% for i in products %}
+                <div style="display:inline-block;margin: 30px;">
+                    <img src="{{i.image.url}}" alt="No Image" width="196px" height="196px">
+                    <p id="id4">Rs.{{i.price}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

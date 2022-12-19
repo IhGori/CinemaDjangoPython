@@ -1,0 +1,282 @@
+{% load static %}
+{% load qr_code %}
+{% load crispy_forms_tags %} 
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CineSD{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/css/grid.css' %}">
+    <link rel="stylesheet" href="{% static '/css/carousel.css' %}">
+    <link rel="stylesheet" href="{% static '/css/infomovies.css' %}">
+    <link rel="stylesheet" href="{% static '/css/horarios.css' %}">
+    <link rel="stylesheet" href="{% static '/css/venda_filme.css' %}">
+
+ 
+   
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+</head>
+<body>
+    <div class="header" id="header">
+        <header class="navbar">
+            <div class="max-width">
+                <div class="logo"><a href="/cinesd">Cine<span>SD</span></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/cinesd">Início</a></li>
+                        <li><a href="/programacao">Programação</a></li>
+                        <li><a href="/snackbar">SnackBar</a></li>
+                        <li><a href="/promocoes">Promoções</a></li>
+                        <li><a href="/contato">Contato</a></li>
+                        <li><a href="/signin">
+                            {% if user.is_authenticated and user.is_active %}
+                            <h3>{{ fname }}</h3>
+                            {% endif %}
+                        </a></li>
+                        <li><a href="#">
+                            {% if user.is_authenticated %}
+                            <button type="submit"><a href="/signout"> Deslogar</a></button>
+                            {% else %}
+                            <button type="submit"><a href="/signin">Login</a></button>
+                            <button type="submit"><a href="/signup">Cadastrar</a></button>
+                            {% endif %}
+                        </a></li>
+                      
+                    </ul>
+                    
+                </div>
+            </div>        
+        </header>
+    </div>
+
+    <div class="venda_filme" id="venda_filme">
+   
+    
+        <div class="bg-modal" id="modal">
+            <div class="modal">
+                <span class="close" onclick="fecharModal()">&times;</span>
+            </br></br></br></br>
+                <div class="precos_cine" id="precos_cine">
+                    <ul>
+                        <li>
+                            O CineSD se reserva o direito de mudar os dias e horários das sessões sem aviso prévio. Confira sempre a nossa programação
+                        </li>
+                        <br>
+                        <li>
+                            Para a compra de ingressos 3D do CineSD: o valor do óculos 3D é R$8,00 e não está incluso no valor do ingresso. Venda exclusiva na bilheteria do cinema.
+                        </li>
+                    </ul>
+                    <br>
+                    <ul>
+                        <li>
+                            <b>Idiomas: </b>
+                            LEG: Legendado | DUB: Dublado | NAC: Nacional
+                        </li>
+                    <br>
+                        <li>
+                            <b>Sessão: </b>
+                            3D: projeção com o uso de óculos 3D | MAT: CineMaterna | AZUL: Sessão Azul
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        </br>
+        </br>
+
+        
+        <div class="dia_filme">
+            <ul>
+                <button id="SEG"><li><a href="">07/04</br>QUI</a></li></button>
+                <button id="TER"><li><a href="">08/04</br>SEX</a></li></button>                                
+                <button id="QUA"><li><a href="">09/04</br>SAB</a></li></button>                            
+            </ul>                
+        </div>
+        <!--Horários e Preço filmes-->
+        <div class="teste">
+            <section class="horario_movie" id="horario_movie">
+               
+    
+                <div class="info_filme">
+                    <div class="cidade_comprar">
+                        <ul>
+                            <li>
+                                <span class="cidade" id="cidade">Petrolina</span>
+                                <ul class="comprar_info">
+                                    <button class="open_modal" onclick="abrirModal()" id="precos"><li>PREÇOS</li></button>      
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    </br>
+                     <hr>
+                    <div class="horarios_e_sala_segunda" id="horarios_e_sala_segunda">
+                        <ul>
+                            <li>
+                                <span class="sala_cinema">Sala 15</span>
+                                <ul class="horario_sala" id="horario_sala1">
+                                    <a href="venda/6b67ce02-fb61-43a1-8845-6329974c246c"><button id="horario"><li>17:00</li></button></a>  
+                                    <a href="venda/494bc87f-82ff-4c1a-b77d-a3aba268f7a3"><button id="horario"><li>20:30</li></button></a>
+                                    <button id="filme_2d"><li>2D</li></button> 
+                                    <button id="tipo_filme"><li>DUB</li></button> 
+                                </ul>
+                                
+                            </li>
+                        </ul>
+    
+                        <div class="horarios_e_sala_segunda" id="horarios_e_sala_segunda">
+                            <ul>
+                                <li>
+                                    <span class="sala_cinema">Sala 16</span>
+                                    <ul class="horario_sala" id="horario_sala1">
+                                        <a href="venda/7801fc97-82f7-47d3-8430-e1053ac27b22"><button id="horario"><li>17:00</li></button></a>
+                                        <a href="venda/9f08f2f5-a155-49a3-bc4f-5a8e8fc4cf17"><button id="horario"><li>20:30</li></button></a>
+                                        <button id="filme_3d"><li>3D</li></button> 
+                                        <button id="tipo_filme"><li>DUB</li></button> 
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+    
+                        </div>  
+                    </div>  
+    
+                    
+                    
+            </section>
+        </div>
+    
+    
+        <div class="teste2">
+            <section class="horario_movie" id="horario_movie">
+               
+    
+                <div class="info_filme2">
+                    <div class="cidade_comprar">
+                        <ul>
+                            <li>
+                                <span class="cidade" id="cidade">Petrolina</span>
+                                <ul class="comprar_info">
+                                    <button class="open_modal" onclick="abrirModal()" id="precos"><li>PREÇOS</li></button>       
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    </br>
+                     <hr>
+                    <div class="horarios_e_sala_segunda" id="horarios_e_sala_segunda">
+                        <ul>
+                            <li>
+                                <span class="sala_cinema">Sala 15</span>
+                                <ul class="horario_sala" id="horario_sala1">
+                                    <a href="venda/26b250bc-1507-452e-ba82-4462db9a47bf"><button id="horario"><li>17:00</li></button></a>     
+                                    <a href="venda/03d4a423-f48f-46de-828b-7d0d4784b356"><button id="horario"><li>20:30</li></button></a>
+                                    <button id="filme_2d"><li>2D</li></button> 
+                                    <button id="tipo_filme"><li>DUB</li></button> 
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                        <div class="horarios_e_sala_segunda" id="horarios_e_sala_segunda">
+                            <ul>
+                                <li>
+                                    <span class="sala_cinema">Sala 16</span>
+                                    <ul class="horario_sala" id="horario_sala1">
+                                        <a href="venda/5c602b8d-f4cb-4136-aee1-dfffe11c04ed"><button id="horario"><li>17:00</li></button></a>     
+                                        <a href="venda/e4967be8-6d69-43b0-bc0f-5a8ef45d1b95"><button id="horario"><li>20:30</li></button></a>
+                                        <button id="filme_3d"><li>3D</li></button> 
+                                        <button id="tipo_filme"><li>DUB</li></button> 
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+    
+                        </div>  
+    
+                </div>  
+            </section>
+        </div>
+    
+                              
+        <div class="teste3">
+            <section class="horario_movie" id="horario_movie">
+               
+    
+                <div class="info_filme3">
+                    <div class="cidade_comprar">
+                        <ul>
+                            <li>
+                                <span class="cidade" id="cidade">Petrolina</span>
+                                <ul class="comprar_info">
+                                    <button class="open_modal" onclick="abrirModal()" id="precos"><li>PREÇOS</li></button>       
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                     </br>
+                     <hr>
+                        <div class="horarios_e_sala_segunda" id="horarios_e_sala_segunda">
+                            <ul>
+                                <li>
+                                    <span class="sala_cinema">Sala 15</span>
+                                    <ul class="horario_sala" id="horario_sala1">
+                                        <a href="venda/66d6311e-fcc7-48e7-a949-418b2385503f"><button id="horario"><li>17:00</li></button></a>      
+                                        <a href="venda/e030d4e1-355e-474b-9abe-06b9fa7906f5"><button id="horario"><li>20:30</li></button></a>
+                                        <button id="filme_2d"><li>2D</li></button> 
+                                        <button id="tipo_filme"><li>DUB</li></button> 
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+    
+                        </div>  
+    
+                        <div class="horarios_e_sala_segunda" id="horarios_e_sala_segunda">
+                            <ul>
+                                <li>
+                                    <span class="sala_cinema">Sala 16</span>
+                                    <ul class="horario_sala" id="horario_sala1">
+                                        <a href="venda/70768523-424e-4a8b-ac6b-f9cadc237e48"><button id="horario"><li>17:00</li></button></a>      
+                                        <a href="venda/25ca4e22-0898-49d5-9f8b-8d7c2ef88a99"><button id="horario"><li>20:30</li></button></a>
+                                        <button id="filme_3d"><li>3D</li></button> 
+                                        <button id="tipo_filme"><li>DUB</li></button> 
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+    
+                        </div>  
+            </section>
+                
+        </div>
+    
+    
+   
+    
+
+    
+   
+    <script src="{% static '/js/script.js' %}"></script>
+    <script src="{% static '/js/carousel.js' %}"></script>
+    <script src="{% static '/js/dia_horario.js' %}"></script>
+    <script src="{% static '/js/dia_horario2.js' %}"></script>
+    <script src="{% static '/js/dia_horario3.js' %}"></script>
+    <script src="{% static '/js/price.js' %}"></script>
+</body>
+</html>

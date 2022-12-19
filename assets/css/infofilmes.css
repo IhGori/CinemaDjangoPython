@@ -1,0 +1,192 @@
+
+  body {
+    margin: 0;
+  }
+
+  p{
+    color: #fd0c0c;
+    padding: 20px 20px;
+  }
+
+
+  
+  strong {
+    font-weight: bold;
+  }
+  dfn {
+    font-style: italic;
+  }
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+    h2,
+    h3,
+    ul li {
+      orphans: 3;
+      widows: 3;
+    }
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+   
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #f3efef;
+    background-color: #000000;
+  }
+
+ 
+
+ 
+  /* CUSTOM ICONS ---------------------------------------------------- */
+  .icon-rating-livre:before {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    content: "L";
+    font-size: 0.6em;
+    position: relative;
+    top: -2px;
+  }
+  .icon-rating-c:before {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    content: "C";
+    font-size: 0.6em;
+    position: relative;
+    top: -2px;
+  }
+  .icon-rating-18:before {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    content: "18";
+    font-size: 0.6em;
+    position: relative;
+    top: -2px;
+  }
+  .icon-rating-16:before {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    content: "16";
+    font-size: 0.6em;
+    position: relative;
+    top: -2px;
+  }
+  .icon-rating-14:before {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    content: "14";
+    font-size: 0.6em;
+    position: relative;
+    top: -2px;
+  }
+  .icon-rating-12:before {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    content: "12";
+    font-size: 0.6em;
+    position: relative;
+    top: -2px;
+  }
+  .icon-rating-10:before {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    content: "10";
+    font-size: 0.6em;
+    position: relative;
+    top: -2px;
+  }
+  .icon-play {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    position: relative;
+    vertical-align: middle;
+  }
+  
+  .movie {
+    position: relative;
+    width: 100%;
+  }
+
+
+ 
+  /* MOVIE ----------------------------------------------------------- */
+ 
+ 
+ 
+    
+  .movie-details-list {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-left: 100px;
+  }
+  .movie-details-list ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .movie-details-list li {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-bottom: 20px;
+    width: 100%;
+    vertical-align: middle;
+  }
+  @media screen and (min-width: 992px) {
+    .movie-details-list li {
+      padding: 0 25px;
+      width: 49.5%;
+    }
+  }
+  .movie-details-list .movie-detail {
+    display: table;
+  }
+  .movie-details-list .detail-icon,
+  .movie-details-list .detail-title {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .movie-details-list .icon {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    /*border: 1px solid @movie-details-icon-color;*/
+    border-radius: 50%;
+    color: #fd0c0c;
+    font-size: 23px;
+    height: 56px;
+    line-height: 52px;
+    text-align: center;
+    width: 56px;
+  }
+  .movie-details-list .detail-title {
+    line-height: 1.2;
+    padding-left: 14px;
+    white-space: normal;
+    color: #fff;
+  }
+  .movie-details-list .detail-title small {
+    display: block;
+    margin: 3px 0 0 0;
+  }
+ 

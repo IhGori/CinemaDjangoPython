@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}  
+{% block title %}CineSD{% endblock %}
+
+
+{% block content %}
+    Página Home
+    
+
+    <!--Seção Contato-->
+   
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+          <h1>Entre em Contato</h1>
+          <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="exampleInputEmail1">Subject</label>
+              <input type="text" name="subject" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Message</label>
+                <input type="text" name="message" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" name="email" class="form-control">
+              </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        </div>
+    </section>
+{% endblock %}

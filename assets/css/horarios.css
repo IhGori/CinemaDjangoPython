@@ -1,0 +1,440 @@
+hr{
+    margin-top:30px;
+    margin-bottom: 30px;
+    border-color:rgb(73, 70, 70);
+}
+
+.teste{
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.teste2{
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+.teste3{
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.dia_filme{
+    padding: 0;
+    margin-left: 28%;
+    margin-bottom: 5px;
+}
+
+
+.dia_filme button{
+    display: inline-block;
+    color: white;
+    background: crimson;
+    border: 2px solid crimson;
+    width: 200px;
+    height: 45px;
+    outline: none;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px #d8262f;
+}
+
+.dia_filme button:hover{
+    background: rgb(87, 2, 2);
+}
+
+.dia_filme #SEG:focus{
+    background: rgb(87, 2, 2);
+}
+
+.dia_filme #SEG:active{
+    background: rgb(87, 2, 2);
+}
+
+
+.dia_filme #TER:focus{
+    background: rgb(87, 2, 2);
+}
+
+.dia_filme #TER:active{
+    background: rgb(87, 2, 2);
+}
+
+.dia_filme #QUA:focus{
+    background: rgb(87, 2, 2);
+}
+
+.dia_filme #QUA:active{
+    background: rgb(87, 2, 2);
+}
+
+
+
+
+
+
+
+/*Estilização Segunda-Feira*/
+
+.info_filme span{
+    font-size: 17px;
+    font-weight: 700px;
+}
+
+.info_filme{
+    display: inline-block;
+    height: 300px;
+    width:800px;
+    background: rgb(41, 40, 40);
+    border: 2px solid crimson;
+    box-shadow: 0px 0px 20px #d8262f;
+    border-radius: 6px;
+    align-items: flex-end;
+    margin-top: 0px;
+    
+    
+}
+
+
+.info_filme button{
+    
+    color: white;
+    background: crimson;
+    border: 2px solid rgb(170, 17, 48);
+    width: 60px;
+    height: 45px;
+    outline: none;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;  
+    
+}
+
+
+.info_filme #filme_2d{
+    margin-left: 320px;
+    background: rgb(155, 10, 39);
+}
+
+.info_filme #filme_3d{
+    margin-left: 320px;
+    background: rgb(155, 10, 39);
+}
+
+.info_filme .horario_sala {
+    margin-left: 30px;
+}
+
+.info_filme #horario:hover{
+    background: rgb(155, 10, 39);
+}
+
+.info_filme #tipo_filme{
+    margin-left: 10px;
+    background: rgb(155, 10, 39);
+}
+
+
+.info_filme ul{
+    display: inline;
+}
+
+.info_filme .horario_sala{
+    margin-top: 60px;
+}
+
+.info_filme #precos{
+    color:white;
+    background: crimson;
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px crimson;
+   
+    margin-left: 320px;
+    width: 100px;
+}
+
+.info_filme #precos:hover{
+    color:rgb(233, 230, 230);
+    background: rgb(85, 84, 84);
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px #979595;
+   
+    margin-left: 320px;
+    width: 100px;
+}
+
+
+.info_filme #compre_aqui{
+    width: 150px;
+    margin-left: 20px;
+    color:white;
+    background: crimson;
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px crimson;
+}
+
+.info_filme #compre_aqui:hover{
+  
+    color:rgb(233, 230, 230);
+    background: rgb(85, 84, 84);
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px #979595;
+}
+
+#horarios_e_sala_segunda{
+    display: inline-block;
+}
+
+
+
+/*Estilização Terça Feira*/
+.info_filme2 span{
+    font-size: 17px;
+    font-weight: 700px;
+}
+
+.info_filme2{
+    display: none;
+    height: 300px;
+    width:800px;
+    background: rgb(41, 40, 40);
+    border: 2px solid crimson;
+    box-shadow: 0px 0px 20px #d8262f;
+    border-radius: 6px;
+    align-items: flex-end;
+    margin-top: 0px;
+    
+    
+}
+
+
+.info_filme2 button{
+    
+    color: white;
+    background: crimson;
+    border: 2px solid rgb(170, 17, 48);
+    width: 60px;
+    height: 45px;
+    outline: none;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;  
+    
+}
+
+
+.info_filme2 #filme_2d{
+    margin-left: 320px;
+    background: rgb(155, 10, 39);
+}
+
+.info_filme2 #filme_3d{
+    margin-left: 320px;
+    background: rgb(155, 10, 39);
+}
+
+.info_filme2 .horario_sala {
+    margin-left: 30px;
+}
+
+.info_filme2 #horario:hover{
+    background: rgb(155, 10, 39);
+}
+
+.info_filme2 #tipo_filme{
+    margin-left: 10px;
+    background: rgb(155, 10, 39);
+}
+
+
+.info_filme2 ul{
+    display: inline;
+}
+
+.info_filme2 .horario_sala{
+    margin-top: 60px;
+}
+
+.info_filme2 #precos{
+    color:white;
+    background: crimson;
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px crimson;
+   
+    margin-left: 320px;
+    width: 100px;
+}
+
+.info_filme2 #precos:hover{
+    color:rgb(233, 230, 230);
+    background: rgb(85, 84, 84);
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px #979595;
+   
+    margin-left: 320px;
+    width: 100px;
+}
+
+
+.info_filme2 #compre_aqui{
+    width: 150px;
+    margin-left: 20px;
+    color:white;
+    background: crimson;
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px crimson;
+}
+
+.info_filme2 #compre_aqui:hover{
+  
+    color:rgb(233, 230, 230);
+    background: rgb(85, 84, 84);
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px #979595;
+}
+
+/*Estilização Quarta*/
+
+.info_filme3 span{
+    font-size: 17px;
+    font-weight: 700px;
+}
+
+.info_filme3{
+    display: none;
+    height: 300px;
+    width:800px;
+    background: rgb(41, 40, 40);
+    border: 2px solid crimson;
+    box-shadow: 0px 0px 20px #d8262f;
+    border-radius: 6px;
+    align-items: flex-end;
+    margin-top: 0px;
+    
+    
+}
+
+
+.info_filme3 button{
+    
+    color: white;
+    background: crimson;
+    border: 2px solid rgb(170, 17, 48);
+    width: 60px;
+    height: 45px;
+    outline: none;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;  
+    
+}
+
+
+.info_filme3 #filme_2d{
+    margin-left: 320px;
+    background: rgb(155, 10, 39);
+}
+
+.info_filme3 #filme_3d{
+    margin-left: 320px;
+    background: rgb(155, 10, 39);
+}
+
+.info_filme3 .horario_sala {
+    margin-left: 30px;
+}
+
+.info_filme3 #horario:hover{
+    background: rgb(155, 10, 39);
+}
+
+.info_filme3 #tipo_filme{
+    margin-left: 10px;
+    background: rgb(155, 10, 39);
+}
+
+
+.info_filme3 ul{
+    display: inline;
+}
+
+.info_filme3 .horario_sala{
+    margin-top: 60px;
+}
+
+.info_filme3 #precos{
+    color:white;
+    background: crimson;
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px crimson;
+   
+    margin-left: 320px;
+    width: 100px;
+}
+
+.info_filme3 #precos:hover{
+    color:rgb(233, 230, 230);
+    background: rgb(85, 84, 84);
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px #979595;
+   
+    margin-left: 320px;
+    width: 100px;
+}
+
+
+.info_filme3 #compre_aqui{
+    width: 150px;
+    margin-left: 20px;
+    color:white;
+    background: crimson;
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px crimson;
+}
+
+.info_filme3 #compre_aqui:hover{
+  
+    color:rgb(233, 230, 230);
+    background: rgb(85, 84, 84);
+    border: 2px solid rgb(71, 69, 71);
+    box-shadow: 0px 0px 20px #979595;
+}
+
+
+.botao_comprar{
+    display: inline-block;
+    align-items: center;
+    margin-left: 515px;
+    margin-bottom: 20px;
+}
+
+.botao_comprar button{
+    color: white;
+    background: crimson;
+    border: 2px solid rgb(170, 17, 48);
+    width: 250px;
+    height: 55px;
+    outline: none;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;  
+}
+
+.botao_comprar button:hover{
+    background: rgb(131, 15, 39);
+    border: 2px solid rgb(170, 17, 48);
+}

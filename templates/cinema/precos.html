@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}  
+{% block title %}CineSD SignUP{% endblock %}
+
+
+{% block content %}
+<div class="precos" id="precos">
+    <h1>Preços no cinema CineSD Petrolina</h1>
+    <br>
+    <h2>CineSD 2D</h2>
+    <p>
+        2ª,3ª,4ª: R$ 28,00 o dia todo
+        5ª,6ª,Sáb,Dom,Emendas e Feriados: R$ 36,00 o dia todo
+    </p>
+    <br>
+    <h2>CineSD 3D</h2>
+    <p>
+        2ª,3ª,4ª: R$ 33,00 o dia todo
+        5ª,6ª,Sáb,Dom,Emendas e Feriados: R$ 40,00 o dia todo
+    </p>
+    <br>
+    <p>
+        *Promoções válidas nos dias mencionados, exceto feriados, emendas, pré-vendas e pré-estreias (consulte a tabela vigente).
+
+        Os valores promocionais não se aplicam às salas, Prime e D-BOX, para as salas XD consulte a tabela do cinema. Promoções não cumulativas e válidas por tempo indeterminado.
+        
+        **Pré-estreias possuem o mesmo valor de ingresso de final de semana noturno.
+        
+        ***Emendas, Pontos Facultativos e Feriados possuem o mesmo valor de ingresso de final de semana (consulte a tabela vigente).
+        
+        ****Pré-Vendas possui o mesmo valor de ingresso do dia da exibição da sessão, de acordo com o preço da tabela vigente na data da sessão.
+    </p>
+</div>
+
+
+{% endblock %}
